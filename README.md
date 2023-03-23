@@ -52,7 +52,7 @@ Error Analysis
 ||Validation |0\.645 |0\.616 |2695 |866 |01:27 |
 |2 |Training |0\.694 |0\.674 |- |- |10:09 |
 ||Validation |0\.638 |0\.605 |2851 |770 |01:27 |
-|Final Validation |0\.645 |0\.616 |2695 |866 |01:28 |
+|Final Validation | |0\.645 |0\.616 |2695 |866 |01:28 |
 
 Conclusion 
 
