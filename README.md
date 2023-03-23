@@ -13,13 +13,13 @@ Exploratory Data Analysis (EDA)
 
 
 
-||Training |Validation |Testing |
-| :- | - | - | - |
-|Mean |11\.640114 |11\.745900 |11\.716600 |
-|Standard deviation |7\.666548 |7\.606045 |11\.109034 |
-|Min |0\.000000 |0\.000000 |1\.000000 |
-|50% |10\.000000 |10\.000000 |10\.000000 |
-|Max |319\.000000 |133\.000000 |841\.000000 |
+                                        ||Training |Validation |Testing |
+                                        | :- | - | - | - |
+                                        |Mean |11\.640114 |11\.745900 |11\.716600 |
+                                        |Standard deviation |7\.666548 |7\.606045 |11\.109034 |
+                                        |Min |0\.000000 |0\.000000 |1\.000000 |
+                                        |50% |10\.000000 |10\.000000 |10\.000000 |
+                                        |Max |319\.000000 |133\.000000 |841\.000000 |
 
 
 - By plotting the scatter-plots of the same, one can observe that besides a few outliers we can safely take 128 as the maximum-length of input tokens, thereby reducing the training time by half if 256 was used (later checked that it didn’t affect the model accuracy).  
@@ -46,13 +46,14 @@ Error Analysis
 
 
 
-|Epoch |Task |Precision |F1-Score |False Positives |False Negatives |Time (in mins) |
-| - | - | - | - | - | - | - |
-|1 |Training |0\.624 |0\.599 |- |- |10:14 |
-||Validation |0\.645 |0\.616 |2695 |866 |01:27 |
-|2 |Training |0\.694 |0\.674 |- |- |10:09 |
-||Validation |0\.638 |0\.605 |2851 |770 |01:27 |
-|Final Validation |0\.645 |0\.616 |2695 |866 |01:28 |
+                                        |Epoch |Task |Precision |F1-Score |False Positives |False Negatives |Time (in mins) |
+                                        | - | - | - | - | - | - | - |
+                                        |1 |Training |0\.624 |0\.599 |- |- |10:14 |
+                                        ||Validation |0\.645 |0\.616 |2695 |866 |01:27 |
+                                        |2 |Training |0\.694 |0\.674 |- |- |10:09 |
+                                        ||Validation |0\.638 |0\.605 |2851 |770 |01:27 |
+                                        |Final Validation |0\.645 |0\.616 |2695 |866 |01:28 |
+
 Conclusion 
 
 In conclusion, I used a DeBERTaV3+CNN based GED classifier model to classify sentences in the given dataset as either grammatically correct or incorrect. I performed basic EDA on the dataset, followed a standard data preprocessing pipeline, fine-tuned the model using cross-entropy loss and Adam optimizer, and performed error analysis to identify the sources of errors made by the model. Based on the experiments of the error analysis, I refined the model hyper-parameter settings and achieved improved performance. The references have already been hyperlinked above wherever used or mentioned. 
